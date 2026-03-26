@@ -3,23 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MissedCall</title>
+  <title>MissedCall — Never Lose a Customer to a Missed Call</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-    .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); color: white; text-align: center; padding: 2rem; }
-    .hero h1 { font-size: 3.5rem; font-weight: 800; letter-spacing: -0.02em; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1e293b; }
+    .hero { min-height: 80vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); color: white; text-align: center; padding: 2rem; }
+    .hero h1 { font-size: 3rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; max-width: 600px; }
     .hero h1 span { color: #60a5fa; }
-    .hero p { margin-top: 1rem; color: #64748b; font-size: 1rem; }
-    @media (max-width: 640px) { .hero h1 { font-size: 2.5rem; } }
+    .hero p { margin-top: 1rem; color: #94a3b8; font-size: 1.1rem; max-width: 500px; }
+    .hero .cta { display: inline-block; margin-top: 2rem; background: #3b82f6; color: white; padding: 0.875rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: background 0.2s; }
+    .hero .cta:hover { background: #2563eb; }
+    .hero .price { margin-top: 0.75rem; color: #64748b; font-size: 0.9rem; }
+    .steps { padding: 4rem 2rem; max-width: 800px; margin: 0 auto; text-align: center; }
+    .steps h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 2.5rem; }
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .step-num { width: 40px; height: 40px; background: #eff6ff; color: #3b82f6; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; margin-bottom: 0.75rem; }
+    .step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .step p { font-size: 0.875rem; color: #64748b; }
+    .pricing { padding: 4rem 2rem; background: #f8fafc; text-align: center; }
+    .pricing h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem; }
+    .price-card { display: inline-block; background: white; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 2rem 3rem; }
+    .price-card .amount { font-size: 2.5rem; font-weight: 800; }
+    .price-card .period { color: #64748b; }
+    .price-card .cta { display: block; margin-top: 1.5rem; background: #3b82f6; color: white; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: background 0.2s; }
+    .price-card .cta:hover { background: #2563eb; }
+    .sms-disclosure { margin-top: 1.25rem; color: #64748b; font-size: 0.75rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+    .sms-disclosure a { color: #94a3b8; text-decoration: underline; }
+    footer { padding: 2rem; text-align: center; color: #94a3b8; font-size: 0.875rem; border-top: 1px solid #e2e8f0; }
+    footer a { color: #94a3b8; text-decoration: none; }
+    footer a:hover { color: #64748b; }
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2.25rem; }
+      .steps-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
   <div class="hero">
     <div>
-      <h1>Missed<span>Call</span></h1>
-      <p>Coming soon.</p>
+      <h1>Never lose a customer to a <span>missed call</span></h1>
+      <p>MissedCall automatically texts back every caller you miss, turning missed calls into conversations and conversations into customers.</p>
+      <a href="/signup" class="cta">Get Started</a>
+      <div class="price">$149/month &middot; Cancel anytime</div>
+      <div class="sms-disclosure">Your customers who miss your call will receive automated SMS messages. Msg & data rates may apply. Msg frequency varies. Reply STOP to opt out. <a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms</a></div>
     </div>
   </div>
+
+  <div class="steps">
+    <h2>How it works</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Forward your calls</h3>
+        <p>Set up call forwarding from your business number to your MissedCall number.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>We text them back</h3>
+        <p>When you miss a call, we instantly send a friendly text so they know you care.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>You close the deal</h3>
+        <p>Get notified of every lead, manage conversations, and never let a customer slip away.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pricing">
+    <h2>Simple pricing</h2>
+    <div class="price-card">
+      <div><span class="amount">$149</span><span class="period">/month</span></div>
+      <a href="/signup" class="cta">Get Started</a>
+    </div>
+  </div>
+
+  <footer>MissedCall &middot; <a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms of Service</a></footer>
 </body>
 </html>
